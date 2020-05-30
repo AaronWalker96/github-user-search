@@ -1,3 +1,126 @@
-.profile-image {
+html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  background: rgb(37, 43, 65);
+  background: linear-gradient(
+    37deg,
+    rgba(37, 43, 65, 1) 0%,
+    rgba(78, 95, 146, 1) 100%
+  );
+  color: white;
+  background-repeat: no-repeat;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.App {
+  height: max-content;
+}
+
+.search-box {
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  margin-right: 10px;
+  box-shadow: 0 6px 6px -6px black;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background: rgb(115, 97, 253);
+  background: linear-gradient(
+    37deg,
+    rgba(115, 97, 253, 1) 0%,
+    rgba(250, 100, 169, 1) 100%
+  );
+  cursor: pointer;
+}
+
+.search-results {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.person-overview {
+  background-color: rgba(37, 43, 65, 1);
+  width: max-content;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px;
+  flex-basis: auto;
+  width: 200px;
+  word-wrap: break-word;
+}
+
+#user-img {
+  background: rgb(115, 97, 253);
+  background: linear-gradient(
+    37deg,
+    rgba(115, 97, 253, 1) 0%,
+    rgba(250, 100, 169, 1) 100%
+  );
+  border: none;
   width: 150px;
+  height: 150px;
+}
+
+.profile-image {
+  border-radius: 10px;
+}
+
+.search-item {
+  background-color: rgba(37, 43, 65, 1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px;
+  flex-basis: auto;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer {
+  position: fixed;
+  text-align: center;
+  left: 0px;
+  bottom: 15px;
+  height: 30px;
+  width: 100%;
 }

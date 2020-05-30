@@ -18,12 +18,9 @@ class App extends Component {
     document.getElementById("user-name").innerHTML = userData.name;
     document.getElementById("user-img").src = userData.avatar_url;
     document.getElementById("user-bio").innerHTML = userData.bio;
-    document.getElementById("user-followers").innerHTML =
-      "Followers: " + userData.followers;
-    document.getElementById("user-following").innerHTML =
-      "Following: " + userData.following;
-    document.getElementById("user-repos").innerHTML =
-      "Public Repos: " + userData.public_repos;
+    document.getElementById("user-followers").innerHTML = userData.followers;
+    document.getElementById("user-following").innerHTML = userData.following;
+    document.getElementById("user-repos").innerHTML = userData.public_repos;
   }
 
   handleChange(event) {
@@ -33,30 +30,57 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Github User Search</h1>
-        <form>
-          <label>Username</label>
-          <input
-            type="text"
-            value={this.state.name}
-            onChange={this.handleChange}
-          ></input>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              this.getUserInfo();
-            }}
-          >
-            Search
-          </button>
-        </form>
-        <div>
-          <p id="user-name"></p>
-          <img className="profile-image" id="user-img"></img>
-          <p id="user-bio"></p>
-          <p id="user-followers"></p>
-          <p id="user-following"></p>
-          <p id="user-repos"></p>
+        <div className="search-box">
+          <h1>Github User Search</h1>
+          <form>
+            <input
+              type="text"
+              placeholder="Username"
+              value={this.state.name}
+              onChange={this.handleChange}
+            ></input>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                this.getUserInfo();
+              }}
+            >
+              Search
+            </button>
+          </form>
+        </div>
+
+        <div className="search-results">
+          <div className="person-overview">
+            <img className="profile-image" id="user-img"></img>
+            <h2 id="user-name">Username</h2>
+            <p id="user-bio">Bio</p>
+          </div>
+          <div className="search-item">
+            <div className="search-item-content">
+              <h1 id="user-followers">0</h1>
+              <p>Followers</p>
+            </div>
+          </div>
+          <div className="search-item">
+            <div className="search-item-content">
+              <h1 id="user-following">0</h1>
+              <p>Following</p>
+            </div>
+          </div>
+          <div className="search-item">
+            <div className="search-item-content">
+              <h1 id="user-repos">0</h1>
+              <p>Public Repos</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="footer">
+          <p>
+            Made with ❤️ by{" "}
+            <a href="https://github.com/AaronWalker96">Aaron Walker</a>
+          </p>
         </div>
       </div>
     );
