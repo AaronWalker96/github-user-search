@@ -52,7 +52,7 @@ class App extends Component {
 
         <div className="search-results">
           <div className="person-overview">
-            <img className="profile-image" id="user-img"></img>
+            <img className="profile-image" id="user-img" alt=""></img>
             <h2 id="user-name">Username</h2>
             <p id="user-bio">Bio</p>
           </div>
@@ -78,7 +78,7 @@ class App extends Component {
 
         <div id="footer">
           <p>
-            Made with ❤️ by{" "}
+            Made with <span role="img" aria-label="heart">❤️</span>by{" "}
             <a href="https://github.com/AaronWalker96">Aaron Walker</a>
           </p>
         </div>
